@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Twitter</title>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular/angular-animate.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
+    <link rel="stylesheet" href="styles/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body ng-controller="MyController">
+    <h1>Here are your random Twitter names!!</h1>
+    <div class="col-md-5"></div>
+    <div class="col-md-2">
+        <button class="btn btn-primary" ng-click="getTwitterName()">Get your Twitter name list!!</button>
+        <ul>
+            <a ng-href="{{data.myLink}}"><li class="animation" ng-repeat="name in twitterName">{{name}}</li></a>
+        </ul>
+    </div>
+</body>
+</html>
